@@ -1,0 +1,54 @@
+<html>
+<head>
+    <title>Random Password Generator</title>
+    <link rel ="stylesheet" type="text/css" href ="style.css">
+    <body>
+
+        <div class="input">
+            <h2>Random Password Generator 💻</h2>
+            <input type ="text" placeholder="Click Generate"
+            id ="password">
+            <div id = "button" onclick="createPwd();"> Generate Password
+
+
+
+            </div>
+        </div>
+        <script type="text/javascript">
+
+function randomInt(min, max) {
+    return Math.floor(Math.random() * (max - min)) + min;
+    }
+    
+    function createPwd (){
+     
+    var password = "";  
+    var str = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789@#$"; 
+    
+      
+    let n = window.prompt(" How long should be the password");
+    //let n = 6;
+    while ( n!== 0){
+    var randomVal = randomInt(0, str.length-1);
+     password += str.charAt(randomVal);
+      --n;
+      }
+
+      document.getElementById("password").value = password;
+
+    }
+
+    
+    
+     
+        
+        
+        </script>
+
+            <div class = "footer">Made by Arnav Mohan and <a href = "https://github.com/anshchawla24">Ansh Chawla</a></div>
+
+    </body>
+
+
+</head>
+</html>
